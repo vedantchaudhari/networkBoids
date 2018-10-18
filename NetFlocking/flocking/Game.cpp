@@ -75,7 +75,7 @@ bool Game::init()
 	mpGraphicsBufferManager->loadBuffer(mPlayerIconBufferID,"arrow.png");
 	mpGraphicsBufferManager->loadBuffer(mEnemyIconBufferID,"enemy-arrow.png");
 	mpGraphicsBufferManager->loadBuffer(mTargetBufferID,"target.png");
-
+	
 	//load Font
 	mpFont = new Font("cour.ttf", 24);
 	
@@ -84,6 +84,7 @@ bool Game::init()
 	if( pBackGroundBuffer != NULL )
 	{
 		mpSpriteManager->createAndManageSprite( BACKGROUND_SPRITE_ID, pBackGroundBuffer, 0, 0, (float)pBackGroundBuffer->getWidth(), (float)pBackGroundBuffer->getHeight() );
+		//mpGraphicsSystem->fillRegion(pBackGroundBuffer, pBackGroundBuffer->getDimensions, pBackGroundBuffer->getDimensions, WHITE_COLOR);
 	}
 	GraphicsBuffer* pPlayerBuffer = mpGraphicsBufferManager->getBuffer( mPlayerIconBufferID );
 	Sprite* pArrowSprite = NULL;
@@ -249,9 +250,9 @@ void Game::displayWeights()
 		selectedWeight << mAlignWeight;
 		weightB << "  Separation Weight: " << mSeparateWeight << "  CohesionWeight: " << mCohesionWeight;
 		
-		mpGraphicsSystem->writeText(*mpFont, (float)5, (float)5, weightA.str(), BLACK_COLOR);
+		mpGraphicsSystem->writeText(*mpFont, (float)5, (float)5, weightA.str(), WHITE_COLOR);
 		mpGraphicsSystem->writeText(*mpFont, (float)255, (float)5, selectedWeight.str(), RED_COLOR);
-		mpGraphicsSystem->writeText(*mpFont, (float)307, (float)5, weightB.str(), BLACK_COLOR);
+		mpGraphicsSystem->writeText(*mpFont, (float)307, (float)5, weightB.str(), WHITE_COLOR);
 
 		break;
 	case(1):
@@ -259,9 +260,9 @@ void Game::displayWeights()
 		selectedWeight << mSeparateWeight;
 		weightB << "  CohesionWeight: " << mCohesionWeight;
 
-		mpGraphicsSystem->writeText(*mpFont, (float)5, (float)5, weightA.str(), BLACK_COLOR);
+		mpGraphicsSystem->writeText(*mpFont, (float)5, (float)5, weightA.str(), WHITE_COLOR);
 		mpGraphicsSystem->writeText(*mpFont, (float)590, (float)5, selectedWeight.str(), RED_COLOR);
-		mpGraphicsSystem->writeText(*mpFont, (float)620, (float)5, weightB.str(), BLACK_COLOR);
+		mpGraphicsSystem->writeText(*mpFont, (float)620, (float)5, weightB.str(), WHITE_COLOR);
 
 		break;
 	case(2):
@@ -269,8 +270,8 @@ void Game::displayWeights()
 		selectedWeight << mCohesionWeight;
 		weightB << "";
 
-		mpGraphicsSystem->writeText(*mpFont, (float)5, (float)5, weightA.str(), BLACK_COLOR);
-		mpGraphicsSystem->writeText(*mpFont, (float)845, (float)5, selectedWeight.str(), RED_COLOR);
+		mpGraphicsSystem->writeText(*mpFont, (float)5, (float)5, weightA.str(), WHITE_COLOR);
+		mpGraphicsSystem->writeText(*mpFont, (float)875, (float)5, selectedWeight.str(), RED_COLOR);
 		break;
 	}
 //write weights
