@@ -30,6 +30,6 @@ public:
 	void render();
 
 	void addToTargetPosBuffer(float x, float y);
-	void clearBuffer();
+	void clearBuffers();
 	void steerTo(float x, float y);
 };

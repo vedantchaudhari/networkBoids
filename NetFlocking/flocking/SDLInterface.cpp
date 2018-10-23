@@ -12,6 +12,13 @@ SDLInterface::~SDLInterface() {
 	SDL_DestroyWindow(mpWindow);
 }
 
+SDLInterface* SDLInterface::getInstance() {
+	if (mInstance = NULL)
+		mInstance = new SDLInterface();
+
+	return mInstance;
+}
+
 void SDLInterface::init(int width, int height, const std::string& title) {
 	if (SDL_Init(SDL_INIT_VIDEO))
 		return;
@@ -40,4 +47,32 @@ void SDLInterface::render() {
 
 void SDLInterface::exit() {
 	SDL_Quit();
+}
+
+void SDLInterface::drawTriangle(float x, float y, float width, float height, float angle) {
+	// Right Corner
+	float x1 = width / 2;
+	float y1 = 0;
+
+	// Left Top
+	float x2 = -width / 2;
+	float y2 = -height / 2;
+
+	// Left Bottom
+	float x3 = -width / 2;
+	float y3 = height / 2;
+
+	float s = sin(-angle);
+	float c = cos(-angle);
+
+	float x1r = (x1 * c) - (y1 * s) + x;
+	float y1r = (x1 * s) + (y1 * c) + y;
+
+	float x2r = (x2 * c) - (y2 * s) + x;
+	float y2r = (x2 * s) + (y2 * c) + y;
+
+	float x3r = (x3 * c) - (y3 * s) + x;
+	float y3r = (x3 * s) + (y3 * c) + y;
+
+	SDL_RenderDrawLine(mpRenderer, x1r, y1r, x2r, y2r);
 }

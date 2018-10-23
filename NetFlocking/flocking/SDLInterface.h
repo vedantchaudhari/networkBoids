@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <math.h>
 #include <string>
 
 #include "SDL.h"
@@ -23,6 +24,9 @@ public:
 	void init(int width, int height, const std::string& name);
 	void render();
 	void exit();
+
+	// Draw Functions
+	void drawTriangle(float x, float y, float width, float height, float angle);
 
 	// Getters
 	static SDLInterface* getInstance();

@@ -11,4 +11,6 @@ Flock::Flock(int numOfBoids) {
 
 float Flock::getDistance(Boid boidA, Boid boidB) {
 	float result;
+
+	return 0;
 }
