@@ -1,0 +1,73 @@
+﻿  WanderSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\game.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  UnitManager.cpp
+c:\users\vedan\desktop\networkboids\flocking\unitmanager.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Unit.cpp
+c:\users\vedan\desktop\networkboids\flocking\unit.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  SteeringComponent.cpp
+c:\users\vedan\desktop\networkboids\flocking\componentmanager.h(2): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Steering.cpp
+c:\users\vedan\desktop\networkboids\flocking\steering.h(6): fatal error C1083: Cannot open include file: 'Vector2D.h': No such file or directory
+  SpriteManager.cpp
+c:\users\vedan\desktop\networkboids\flocking\spritemanager.h(1): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Sprite.cpp
+c:\users\vedan\desktop\networkboids\flocking\sprite.h(12): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  SeparationSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\steering.h(6): fatal error C1083: Cannot open include file: 'Vector2D.h': No such file or directory
+  SeekSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\steering.h(6): fatal error C1083: Cannot open include file: 'Vector2D.h': No such file or directory
+  Renderer.cpp
+c:\users\vedan\desktop\networkboids\flocking\renderer.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  PositionComponent.cpp
+c:\users\vedan\desktop\networkboids\flocking\positioncomponent.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  PlayerMoveToMessage.cpp
+c:\users\vedan\desktop\networkboids\flocking\game.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  PhysicsComponent.cpp
+c:\users\vedan\desktop\networkboids\flocking\component.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  ModifyWeightMessage.cpp
+c:\users\vedan\desktop\networkboids\flocking\gamemessage.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  main.cpp
+c:\users\vedan\desktop\networkboids\flocking\game.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  InputManager.cpp
+c:\users\vedan\desktop\networkboids\flocking\inputmanager.h(2): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  GraphicsSystem.cpp
+c:\users\vedan\desktop\networkboids\flocking\graphicssystem.cpp(1): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  GraphicsBufferManager.cpp
+c:\users\vedan\desktop\networkboids\flocking\graphicsbuffermanager.h(5): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  GraphicsBuffer.cpp
+c:\users\vedan\desktop\networkboids\flocking\graphicsbuffer.cpp(1): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  GameMessageManager.cpp
+c:\users\vedan\desktop\networkboids\flocking\game.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Generating Code...
+  Compiling...
+  GameMessage.cpp
+c:\users\vedan\desktop\networkboids\flocking\gamemessage.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Game.cpp
+c:\users\vedan\desktop\networkboids\flocking\game.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Font.cpp
+c:\users\vedan\desktop\networkboids\flocking\font.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  FlockingSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\flockingsteering.h(1): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  FaceSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\steering.h(6): fatal error C1083: Cannot open include file: 'Vector2D.h': No such file or directory
+  EndGameMessage.cpp
+c:\users\vedan\desktop\networkboids\flocking\gamemessage.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  DeleteBoidMessage.cpp
+c:\users\vedan\desktop\networkboids\flocking\gamemessage.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  ComponentManager.cpp
+c:\users\vedan\desktop\networkboids\flocking\componentmanager.h(2): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Component.cpp
+c:\users\vedan\desktop\networkboids\flocking\component.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Color.cpp
+c:\users\vedan\desktop\networkboids\flocking\color.h(2): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  CohesionSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\steering.h(6): fatal error C1083: Cannot open include file: 'Vector2D.h': No such file or directory
+  ChangeSelectedWeightMessage.cpp
+c:\users\vedan\desktop\networkboids\flocking\gamemessage.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  ArriveSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\steering.h(6): fatal error C1083: Cannot open include file: 'Vector2D.h': No such file or directory
+  AlignmentSteering.cpp
+c:\users\vedan\desktop\networkboids\flocking\steering.h(6): fatal error C1083: Cannot open include file: 'Vector2D.h': No such file or directory
+  AddBoidsMessage.cpp
+c:\users\vedan\desktop\networkboids\flocking\gamemessage.h(3): fatal error C1083: Cannot open include file: 'Trackable.h': No such file or directory
+  Generating Code...
