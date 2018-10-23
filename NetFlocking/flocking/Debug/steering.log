@@ -1,0 +1,39 @@
+﻿  WanderSteering.cpp
+  UnitManager.cpp
+  Unit.cpp
+  SteeringComponent.cpp
+  Steering.cpp
+  SpriteManager.cpp
+  Sprite.cpp
+  SeparationSteering.cpp
+  SeekSteering.cpp
+  Renderer.cpp
+  PositionComponent.cpp
+  PlayerMoveToMessage.cpp
+  PhysicsComponent.cpp
+  ModifyWeightMessage.cpp
+  main.cpp
+  InputManager.cpp
+  GraphicsSystem.cpp
+  GraphicsBufferManager.cpp
+  GraphicsBuffer.cpp
+  GameMessageManager.cpp
+  Generating Code...
+  Compiling...
+  GameMessage.cpp
+  Game.cpp
+  Font.cpp
+  FlockingSteering.cpp
+  FaceSteering.cpp
+  EndGameMessage.cpp
+  DeleteBoidMessage.cpp
+  ComponentManager.cpp
+  Component.cpp
+  Color.cpp
+  CohesionSteering.cpp
+  ChangeSelectedWeightMessage.cpp
+  ArriveSteering.cpp
+  AlignmentSteering.cpp
+  AddBoidsMessage.cpp
+  Generating Code...
+  steering.vcxproj -> C:\Users\vedan\Desktop\networkBoids\NetFlocking\flocking\Debug\steering.exe
