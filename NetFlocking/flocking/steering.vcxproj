@@ -18,6 +18,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Boid.h" />
+    <ClInclude Include="Define.h" />
     <ClInclude Include="Flock.h" />
     <ClInclude Include="SDLInterface.h" />
   </ItemGroup>
