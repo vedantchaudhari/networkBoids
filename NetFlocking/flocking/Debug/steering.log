@@ -1,10 +1,16 @@
-﻿  SDLInterface.cpp
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(89): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(91): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Main.cpp
-  Flock.cpp
-  Boid.cpp
+﻿  Boid.cpp
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(5): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(6): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(9): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(44): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(71): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(75): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(77): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(79): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(81): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   steering.vcxproj -> C:\Users\vedan\Desktop\networkBoids\NetFlocking\flocking\Debug\steering.exe

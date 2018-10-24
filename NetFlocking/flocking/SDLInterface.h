@@ -9,13 +9,15 @@
 
 class SDLInterface {
 private:
-	static SDLInterface* mInstance;
+	static SDLInterface* mpInstance;
 
 	SDL_Window* mpWindow;
 	SDL_Renderer* mpRenderer;
 
 	int mWindowWidth;
 	int mWindowHeight;
+
+	bool isExit = false;
 
 public:
 	SDLInterface();

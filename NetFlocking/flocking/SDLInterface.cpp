@@ -1,32 +1,31 @@
+#include "SDLInterface.h"
+
 #include "SDL.h"
 #include "SDL_image.h"
 
-#include "SDLInterface.h"
-
-SDLInterface* SDLInterface::mInstance = NULL;
+SDLInterface* SDLInterface::mpInstance = NULL;
 
 SDLInterface::SDLInterface() {
-	this->mpWindow = NULL;
-	this->mpRenderer = NULL;
+	this->mpWindow = nullptr;
+	this->mpRenderer = nullptr;
 }
 
-SDLInterface::~SDLInterface() {
-}
+SDLInterface::~SDLInterface() {}
 
 SDLInterface* SDLInterface::getInstance() {
-	if (mInstance = NULL)
-		mInstance = new SDLInterface();
+	if (mpInstance == NULL)
+		mpInstance = new SDLInterface();
 
-	return mInstance;
+	return mpInstance;
 }
 
 void SDLInterface::init(int width, int height, const std::string& title) {
-	if (SDL_Init(SDL_INIT_VIDEO))
+	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 		return;
 
 	mpWindow = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
 		width, height, SDL_WINDOW_OPENGL);
-	if (mpWindow == NULL)
+	if (mpWindow == nullptr)
 		return;
 
 	// Initialize PNG images
@@ -35,7 +34,7 @@ void SDLInterface::init(int width, int height, const std::string& title) {
 		return;
 
 	mpRenderer = SDL_CreateRenderer(mpWindow, -1, SDL_RENDERER_ACCELERATED);
-	if (mpWindow == NULL)
+	if (mpRenderer == nullptr)
 		return;
 
 	this->mWindowWidth = width;

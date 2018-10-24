@@ -11,7 +11,7 @@
 
 #define COHESION_WEIGHT 0.01
 #define SEPARATION_WEIGHT 0.09
-#define ALIGNMENT_WEIGHT 0.09
+#define ALIGNMENT_WEIGHT 0.9
 
 #define PI 3.1415
 #define TICK 10

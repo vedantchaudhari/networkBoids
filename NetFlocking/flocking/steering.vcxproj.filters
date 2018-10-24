@@ -19,11 +19,14 @@
     <Filter Include="Source Files\Graphics">
       <UniqueIdentifier>{c4ae7624-e121-4a43-87ce-ac08c1110b47}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{b129ae12-ccbc-4b61-b385-03d199119761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{601306d5-fe2c-486c-95ae-5d6188b23f5b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Boid.cpp">
       <Filter>Source Files\Boids</Filter>
     </ClCompile>
@@ -32,6 +35,12 @@
     </ClCompile>
     <ClCompile Include="Flock.cpp">
       <Filter>Source Files\Boids</Filter>
+    </ClCompile>
+    <ClCompile Include="Client_Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputInterface.cpp">
+      <Filter>Source Files\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +55,9 @@
     </ClInclude>
     <ClInclude Include="Define.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputInterface.h">
+      <Filter>Header Files\Input</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
