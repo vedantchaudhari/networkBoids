@@ -89,3 +89,24 @@ void SDLInterface::drawTriangle(float x, float y, float width, float height, flo
 	SDL_RenderDrawLine(mpRenderer, x2r, y2r, x3r, y3r);
 	SDL_RenderDrawLine(mpRenderer, x3r, y3r, x1r, y1r);
 }
+
+void SDLInterface::drawLine(int x1, int y1, int x2, int y2) {
+	SDL_RenderDrawLine(mpRenderer, x1, y1, x2, y2);
+}
+
+void SDLInterface::drawCircle(int x, int y, int radius) {
+	int x1, y1, x2, y2;
+	double theta = 0;
+
+	while (theta < 2 * PI) {
+		x1 = x + cos(theta) * radius;
+		y1 = y - sin(theta) * radius;
+
+		theta += (2 * PI / 32);
+
+		x2 = x + cos(theta) * radius;
+		y2 = y - sin(theta) * radius;
+
+		drawLine(x1, y1, x2, y2);
+	}
+}

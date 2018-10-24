@@ -6,6 +6,7 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
+#include "Define.h"
 
 class SDLInterface {
 private:
@@ -28,10 +29,12 @@ public:
 	void exit();
 
 	void background();
-	void setColor(int r, int g, int b, int a);
 
 	// Draw Functions
+	void setColor(int r, int g, int b, int a);
 	void drawTriangle(float x, float y, float width, float height, float angle);
+	void drawLine(int x1, int y1, int x2, int y2);
+	void drawCircle(int x, int y, int radius);
 
 	// Getters
 	static SDLInterface* getInstance();

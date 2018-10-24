@@ -2,8 +2,8 @@
 
 Boid::Boid() {
 	// Set boid x & y pos randomly
-	pos[0] = rand() % 250 + WIDTH / 2;
-	pos[1] = rand() % 250 + HEIGHT / 2;
+	pos[0] = (rand() % 100) + WIDTH / 2;
+	pos[1] = (rand() % 100) + HEIGHT / 2;
 
 	// Set random x & y velocity
 	velocity[0] = (100 - (rand() % 200)) / 100.0;
@@ -45,7 +45,28 @@ void Boid::update() {
 }
 
 void Boid::render() {
+	SDLInterface::getInstance()->setColor(255, 255, 255, 255);
 	SDLInterface::getInstance()->drawTriangle(pos[0], pos[1], BOID_WIDTH, BOID_HEIGHT, theta);
+
+	if (DRAW_RADIUS_FLAG) {
+		SDLInterface::getInstance()->setColor(255, 0, 0, 255);
+		SDLInterface::getInstance()->drawCircle(pos[0], pos[1], BOID_RADIUS);
+		SDLInterface::getInstance()->drawCircle(pos[0], pos[1], SEPERATION_RADIUS);
+	}
+
+	if (DRAW_VECTOR_FLAG) {
+		SDLInterface::getInstance()->drawCircle(cohesionTargetPos[0], cohesionTargetPos[1], 10);
+		SDLInterface::getInstance()->drawLine(pos[0], pos[1], cohesionTargetPos[0],
+			cohesionTargetPos[1]);
+
+		SDLInterface::getInstance()->drawCircle(separationTargetPos[0], separationTargetPos[1], 10);
+		SDLInterface::getInstance()->drawLine(pos[0], pos[1], separationTargetPos[0],
+			separationTargetPos[1]);
+
+		SDLInterface::getInstance()->drawCircle(alignmentTargetPos[0], alignmentTargetPos[1], 10);
+		SDLInterface::getInstance()->drawLine(pos[0], pos[1], alignmentTargetPos[0],
+			alignmentTargetPos[1]);
+	}
 }
 
 void Boid::addToTargetPosBuffer(float x, float y) {
