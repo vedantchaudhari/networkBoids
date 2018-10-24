@@ -15,8 +15,8 @@ public:
 
 	// Steering behaviors
 
+	float getDistance(Boid boidA, Boid boidB);
+
 	void update();
 	void render();
-
-	float getDistance(Boid boidA, Boid boidB);
 };

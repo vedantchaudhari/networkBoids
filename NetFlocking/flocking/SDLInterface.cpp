@@ -1,3 +1,6 @@
+#include "SDL.h"
+#include "SDL_image.h"
+
 #include "SDLInterface.h"
 
 SDLInterface* SDLInterface::mInstance = NULL;
@@ -8,8 +11,6 @@ SDLInterface::SDLInterface() {
 }
 
 SDLInterface::~SDLInterface() {
-	SDL_DestroyRenderer(mpRenderer);
-	SDL_DestroyWindow(mpWindow);
 }
 
 SDLInterface* SDLInterface::getInstance() {
@@ -46,7 +47,18 @@ void SDLInterface::render() {
 }
 
 void SDLInterface::exit() {
+	SDL_DestroyRenderer(mpRenderer);
+	SDL_DestroyWindow(mpWindow);
 	SDL_Quit();
+}
+
+void SDLInterface::background() {
+	setColor(0, 0, 0, 255);
+	SDL_RenderClear(mpRenderer);
+}
+
+void SDLInterface::setColor(int r, int g, int b, int a) {
+	SDL_SetRenderDrawColor(mpRenderer, r, g, b, a);
 }
 
 void SDLInterface::drawTriangle(float x, float y, float width, float height, float angle) {
@@ -75,4 +87,6 @@ void SDLInterface::drawTriangle(float x, float y, float width, float height, flo
 	float y3r = (x3 * s) + (y3 * c) + y;
 
 	SDL_RenderDrawLine(mpRenderer, x1r, y1r, x2r, y2r);
+	SDL_RenderDrawLine(mpRenderer, x2r, y2r, x3r, y3r);
+	SDL_RenderDrawLine(mpRenderer, x3r, y3r, x1r, y1r);
 }

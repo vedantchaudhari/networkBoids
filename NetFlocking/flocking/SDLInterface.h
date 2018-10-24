@@ -25,6 +25,9 @@ public:
 	void render();
 	void exit();
 
+	void background();
+	void setColor(int r, int g, int b, int a);
+
 	// Draw Functions
 	void drawTriangle(float x, float y, float width, float height, float angle);
 

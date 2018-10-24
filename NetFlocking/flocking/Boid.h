@@ -4,6 +4,7 @@
 #include <math.h>
 
 #include "Define.h"
+#include "SDLInterface.h"
 
 class Boid {
 private:
