@@ -55,14 +55,17 @@ void Boid::render() {
 	}
 
 	if (DRAW_VECTOR_FLAG) {
+		SDLInterface::getInstance()->setColor(0, 255, 0, 255);
 		SDLInterface::getInstance()->drawCircle(cohesionTargetPos[0], cohesionTargetPos[1], 10);
 		SDLInterface::getInstance()->drawLine(pos[0], pos[1], cohesionTargetPos[0],
 			cohesionTargetPos[1]);
 
+		SDLInterface::getInstance()->setColor(0, 0, 255, 255);
 		SDLInterface::getInstance()->drawCircle(separationTargetPos[0], separationTargetPos[1], 10);
 		SDLInterface::getInstance()->drawLine(pos[0], pos[1], separationTargetPos[0],
 			separationTargetPos[1]);
 
+		SDLInterface::getInstance()->setColor(255, 255, 0, 255);
 		SDLInterface::getInstance()->drawCircle(alignmentTargetPos[0], alignmentTargetPos[1], 10);
 		SDLInterface::getInstance()->drawLine(pos[0], pos[1], alignmentTargetPos[0],
 			alignmentTargetPos[1]);

@@ -1,6 +1,6 @@
 // FLAGS
-#define DRAW_RADIUS_FLAG false
-#define DRAW_VECTOR_FLAG false
+#define DRAW_RADIUS_FLAG true
+#define DRAW_VECTOR_FLAG true
 
 // CONSTANTS
 #define WIDTH 640
