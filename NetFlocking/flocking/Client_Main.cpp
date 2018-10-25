@@ -8,10 +8,14 @@
 #include "Define.h"
 #include "Flock.h"
 #include "SDLInterface.h"
+#include "InputInterface.h"
 
 void update() {
 	SDLInterface::getInstance()->render();
 	SDLInterface::getInstance()->background();
+	
+	InputInterface::getInstance()->update();
+
 	SDLInterface::getInstance()->setColor(255, 255, 255, 255);
 }
 
@@ -22,7 +26,7 @@ int main(int argc, char *argv[]) {
 	Uint32 iTime = SDL_GetTicks();
 	Uint32 iTime2 = 0;
 
-	while (1) {
+	while (SDLInterface::getInstance()->isExit == false) {
 		iTime2 = SDL_GetTicks();
 
 		if (iTime2 - iTime >= TICK) {

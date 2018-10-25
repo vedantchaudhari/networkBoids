@@ -18,9 +18,9 @@ private:
 	int mWindowWidth;
 	int mWindowHeight;
 
+public:
 	bool isExit = false;
 
-public:
 	SDLInterface();
 	~SDLInterface();
 

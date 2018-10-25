@@ -20,8 +20,8 @@ private:
 public:
 	static InputInterface* getInstance();
 
-	bool isKeyDown(SDL_Scancode);
-	bool isKeyUp(SDL_Scancode);
+	bool isKeyDown(SDL_Scancode key);
+	bool isKeyUp(SDL_Scancode key);
 
 	void update();
 };

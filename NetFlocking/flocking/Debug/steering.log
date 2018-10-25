@@ -1,40 +1,5 @@
-﻿  Boid.cpp
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(5): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(6): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(9): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(10): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(24): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(44): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(54): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(61): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(65): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(69): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(70): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(95): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(99): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(101): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(103): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(105): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-  Compiling...
-  SDLInterface.cpp
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(88): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(89): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(90): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(102): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(103): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(107): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(108): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  Flock.cpp
+﻿  InputInterface.cpp
   Client_Main.cpp
   Generating Code...
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
   steering.vcxproj -> C:\Users\vedan\Desktop\networkBoids\NetFlocking\flocking\Debug\steering.exe
