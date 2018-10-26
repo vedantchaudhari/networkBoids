@@ -87,7 +87,7 @@ int main(int const argc, char const *const *const argv)
 				ClientData* gameMessage = (ClientData*)packet->data;
 				if (clients[0].instantiated == false)
 				{
-					clients[0] = *gameMessage;
+					//clients[0] = gameMessage;
 					clients[0].clientFlock = gameMessage->clientFlock;
 					clients[0].clientIP = packet->systemAddress;
 					clients[0].instantiated = true;
@@ -95,7 +95,7 @@ int main(int const argc, char const *const *const argv)
 				}
 				else if (clients[1].instantiated == false)
 				{
-					clients[1] = *gameMessage;
+					//clients[1] = *gameMessage;
 					clients[1].clientFlock = gameMessage->clientFlock;
 					clients[1].clientIP = packet->systemAddress;
 					clients[1].instantiated = true;
