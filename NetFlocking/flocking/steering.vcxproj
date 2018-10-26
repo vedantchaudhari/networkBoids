@@ -76,11 +76,11 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\..\DeanLib\include;..\..\external libs\SDL2\SDL\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(DEV_SDK_DIR)include\ ;..\..\DeanLib\include;..\..\external libs\SDL2\SDL\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;DeanLibDebug.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\external libs\SDL2\SDL\lib\win32;..\..\DeanLib\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>RakNet.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;DeanLibDebug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(DEV_SDK_DIR)lib\$(PlatformTarget)\$(PlatformToolset)\$(Configuration)\ ;%(AdditionalLibraryDirectories);..\..\external libs\SDL2\SDL\lib\win32;..\..\DeanLib\lib</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
