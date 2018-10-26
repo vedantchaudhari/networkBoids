@@ -62,6 +62,9 @@ int main(int const argc, char const *const *const argv)
 			case ID_REMOTE_CONNECTION_LOST:
 				printf("Another client has lost the connection.\n");
 				break;
+			case ID_NEW_INCOMING_CONNECTION:
+				printf("A client has connected.\n");
+				break;
 			case ID_REMOTE_NEW_INCOMING_CONNECTION:
 				printf("Another client has connected.\n");
 				break;

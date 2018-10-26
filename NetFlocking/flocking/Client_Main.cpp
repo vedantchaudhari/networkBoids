@@ -18,13 +18,17 @@
 
 enum GameMessages
 {
-	PUSH = ID_USER_PACKET_ENUM + 1,
-	SETMODE_PUSH,
+	SETMODE_PUSH= ID_USER_PACKET_ENUM + 1,
 	SETMODE_SHARE,
 	SETMODE_COUPLED
 };
 
-
+enum dataMode
+{
+	PUSH_MODE,
+	SHARE_MODE,
+	COUPLED_MODE,
+};
 void update() {
 	SDLInterface::getInstance()->render();
 	SDLInterface::getInstance()->background();
@@ -48,6 +52,11 @@ int main(int argc, char *argv[]) {
 	char str[512];
 	RakNet::SocketDescriptor sd;
 
+	//network modes
+	int dataMode = PUSH_MODE;
+
+
+
 	peer->Startup(1, &sd, 1);
 
 	//set up client connection to server
@@ -63,6 +72,31 @@ int main(int argc, char *argv[]) {
 	//big timeout timer
 	peer->SetTimeoutTime(999999, RakNet::UNASSIGNED_SYSTEM_ADDRESS);
 	while (SDLInterface::getInstance()->isExit == false) {
+		
+		//recieve network packets
+		for (packet = peer->Receive(); packet; peer->DeallocatePacket(packet), packet = peer->Receive())
+		{
+			switch (packet->data[0])
+			{
+			case SETMODE_PUSH:
+			{
+				dataMode = PUSH_MODE;
+			}
+			break;
+			case SETMODE_SHARE:
+			{
+				dataMode = PUSH_MODE;
+			}
+			break;
+			case SETMODE_COUPLED:
+			{
+				dataMode = COUPLED_MODE;
+			}
+			break;
+
+		}
+
+		//run local boids
 		iTime2 = SDL_GetTicks();
 
 		if (iTime2 - iTime >= TICK) {
@@ -70,6 +104,25 @@ int main(int argc, char *argv[]) {
 			flock.update();
 		}
 
+		// send data to server
+		switch (dataMode)
+		{
+		case PUSH_MODE:
+		{
+
+		}
+		break;
+		case SHARE_MODE:
+		{
+
+		}
+		break;
+		case COUPLED_MODE:
+		{
+
+		}
+		break;
+		}
 		flock.render();
 		update();
 	}
