@@ -19,4 +19,11 @@ public:
 
 	void update();
 	void render();
+
+	Flock operator=(const Flock& b)
+	{
+		count = b.count;
+		boids = b.boids;
+		return *this;
+	}
 };

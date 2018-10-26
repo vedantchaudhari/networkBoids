@@ -20,7 +20,18 @@ enum GameMessages
 {
 	SETMODE_PUSH= ID_USER_PACKET_ENUM + 1,
 	SETMODE_SHARE,
-	SETMODE_COUPLED
+	SETMODE_COUPLED,
+	DATA_PUSH,
+	DATA_SHARE,
+	DATA_COUPLED,
+	SEND_CLIENTDATA
+};
+
+struct ClientData
+{
+	int ID = SEND_CLIENTDATA;
+	Flock clientFlock = NULL;
+	RakNet::SystemAddress clientIP;
 };
 
 enum dataMode
@@ -55,8 +66,6 @@ int main(int argc, char *argv[]) {
 	//network modes
 	int dataMode = PUSH_MODE;
 
-
-
 	peer->Startup(1, &sd, 1);
 
 	//set up client connection to server
@@ -71,10 +80,17 @@ int main(int argc, char *argv[]) {
 
 	//big timeout timer
 	peer->SetTimeoutTime(999999, RakNet::UNASSIGNED_SYSTEM_ADDRESS);
+
+
+	
 	while (SDLInterface::getInstance()->isExit == false) {
 		
 		//recieve network packets
-		for (packet = peer->Receive(); packet; peer->DeallocatePacket(packet), packet = peer->Receive())
+		for (
+			packet = peer->Receive();
+			packet; 
+			peer->DeallocatePacket(packet), packet = peer->Receive()
+			)
 		{
 			switch (packet->data[0])
 			{
@@ -93,40 +109,55 @@ int main(int argc, char *argv[]) {
 				dataMode = COUPLED_MODE;
 			}
 			break;
+			case SEND_CLIENTDATA:
+			{
 
+				printf("data sent\n");
+				//send out client data to server
+				ClientData sendData;
+				sendData.clientFlock = flock;
+				//sendData.clientFlock.boids = flock.boids;
+				sendData.ID = SEND_CLIENTDATA;
+				peer->Send((char*)&sendData, sizeof(sendData), HIGH_PRIORITY, RELIABLE_ORDERED, 0, packet->systemAddress, false);
+
+			}
+			break;
+
+			}
 		}
+			//run local boids
+			
+			iTime2 = SDL_GetTicks();
 
-		//run local boids
-		iTime2 = SDL_GetTicks();
+			if (iTime2 - iTime >= TICK) {
+				iTime = SDL_GetTicks();
+				flock.update();
+			}
+			
 
-		if (iTime2 - iTime >= TICK) {
-			iTime = SDL_GetTicks();
-			flock.update();
+			// send data to server
+			switch (dataMode)
+			{
+			case PUSH_MODE:
+			{
+
+			}
+			break;
+			case SHARE_MODE:
+			{
+
+			}
+			break;
+			case COUPLED_MODE:
+			{
+
+			}
+			break;
+			}
+			flock.render();
+			update();
 		}
-
-		// send data to server
-		switch (dataMode)
-		{
-		case PUSH_MODE:
-		{
-
-		}
-		break;
-		case SHARE_MODE:
-		{
-
-		}
-		break;
-		case COUPLED_MODE:
-		{
-
-		}
-		break;
-		}
-		flock.render();
-		update();
-	}
-
+	
 	SDLInterface::getInstance()->exit();
 	return 0;
 }

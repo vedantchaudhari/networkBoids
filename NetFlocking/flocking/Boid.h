@@ -33,4 +33,25 @@ public:
 	void addToTargetPosBuffer(float x, float y);
 	void clearBuffers();
 	void steerTo(float x, float y);
+
+	Boid operator=(const Boid b)
+	{
+		numOfNeighbors = b.numOfNeighbors;
+		pos[0] = b.pos[0];
+		pos[1] = b.pos[1];
+		alignmentTargetPos[0] = b.alignmentTargetPos[0];
+		alignmentTargetPos[1] = b.alignmentTargetPos[1];
+		cohesionTargetPos[0] = b.cohesionTargetPos[0];
+		cohesionTargetPos[1] = b.cohesionTargetPos[1];
+		separationTargetPos[0] = b.separationTargetPos[0];
+		separationTargetPos[1] = b.separationTargetPos[1];
+
+		targetPosBuffer[0] = b.targetPosBuffer[0];
+		targetPosBuffer[1] = b.targetPosBuffer[1];
+		velocity[0] = b.velocity[0];
+		velocity[1] = b.velocity[1];
+		theta = b.theta;
+
+		return *this;
+	}
 };

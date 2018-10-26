@@ -13,23 +13,35 @@
 #include "RakNet/BitStream.h"
 #include "RakNet/GetTime.h"
 
+//boids includes
+#include "Define.h"
+#include "Flock.h"
 
 enum GameMessages
 {
-	SETMODE_PUSH = ID_USER_PACKET_ENUM,
+	SETMODE_PUSH = ID_USER_PACKET_ENUM+1,
 	SETMODE_SHARE,
 	SETMODE_COUPLED,
-	ID_LOCAL_PRINT,
+	DATA_PUSH,
+	DATA_SHARE,
+	DATA_COUPLED,
+	INCOMING_CLIENTDATA,
 	ID_SEND_TO_ALL_FROM_SERVER,
-	ID_GAME_MESSAGE_1,
 };
 
 #pragma pack(push, 1)
 struct GameMessageData
 {
-	int ID = ID_LOCAL_PRINT;
-	char msg[512];
-	int color;
-	RakNet::SystemAddress sendLoc;
+	int ID = DATA_PUSH;
+	Flock flockData = NULL;
+};
+#pragma pack(pop)
+#pragma pack(push, 1)
+struct ClientData
+{
+	int ID = INCOMING_CLIENTDATA;
+	Flock clientFlock = Flock(NUM_BOIDS);
+	RakNet::SystemAddress clientIP;
+	bool instantiated = false;
 };
 #pragma pack(pop)

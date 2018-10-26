@@ -18,8 +18,6 @@
 int main(int const argc, char const *const *const argv)
 {
 	//Initializations
-	const unsigned int bufferSz = 512;
-	char str[bufferSz];
 	unsigned short serverPort = 60000;
 	const unsigned int MAX_CLIENTS = 3;
 
@@ -28,12 +26,8 @@ int main(int const argc, char const *const *const argv)
 	//Begin Networking
 	RakNet::RakPeerInterface *peer = RakNet::RakPeerInterface::GetInstance();
 
-	//set up server
-	printf("Set Server Name:\n");
-	fgets(str, 512, stdin);
-	str[strcspn(str, "\n")] = 0;//GET RID OF UNCESSARY NEW LINE
-	strcpy(serverName.msg, str);
 
+	ClientData clients[2];
 
 	RakNet::SocketDescriptor sd(serverPort, 0);
 	peer->Startup(MAX_CLIENTS, &sd, 1);
@@ -63,8 +57,13 @@ int main(int const argc, char const *const *const argv)
 				printf("Another client has lost the connection.\n");
 				break;
 			case ID_NEW_INCOMING_CONNECTION:
+			{
 				printf("A client has connected.\n");
-				break;
+				GameMessageData gameMessage;
+				gameMessage.ID = INCOMING_CLIENTDATA;
+				peer->Send((char*)&gameMessage, sizeof(gameMessage), HIGH_PRIORITY, RELIABLE_ORDERED, 0, packet->systemAddress, false);
+			}
+			break;
 			case ID_REMOTE_NEW_INCOMING_CONNECTION:
 				printf("Another client has connected.\n");
 				break;
@@ -76,21 +75,60 @@ int main(int const argc, char const *const *const argv)
 			case ID_CONNECTION_LOST:
 				printf("A client lost the connection.\n");
 				break;
-			case ID_LOCAL_PRINT:
-			{
-				GameMessageData* gameMessage = (GameMessageData*)packet->data;
-				printf("%s\n", gameMessage->msg);
-			}
+		
 			break;
 
+			//Jack
+			case INCOMING_CLIENTDATA:
+			{
+
+				//add client data to client list
+				printf("incoming client data: \n");
+				ClientData* gameMessage = (ClientData*)packet->data;
+				if (clients[0].instantiated == false)
+				{
+					clients[0] = *gameMessage;
+					clients[0].clientFlock = gameMessage->clientFlock;
+					clients[0].clientIP = packet->systemAddress;
+					clients[0].instantiated = true;
+					printf("Client 1 connected");
+				}
+				else if (clients[1].instantiated == false)
+				{
+					clients[1] = *gameMessage;
+					clients[1].clientFlock = gameMessage->clientFlock;
+					clients[1].clientIP = packet->systemAddress;
+					clients[1].instantiated = true;
+					printf("Client 2 connected");
+
+				}
+			}
+			break;
+			case DATA_PUSH:
+			{
+
+			}
+			break;
+			//Jack
+			case DATA_SHARE:
+			{
+
+			}
+			break;
+			//Jack
+			case DATA_COUPLED:
+			{
+
+			}
+			break;
 			case ID_SEND_TO_ALL_FROM_SERVER:
 			{
 				GameMessageData* temp;
 				temp = (GameMessageData*)packet->data;
 				GameMessageData gameMessage = *temp;
-				gameMessage.ID = ID_LOCAL_PRINT;
+				//gameMessage.ID = ID_LOCAL_PRINT;
 
-				printf(gameMessage.msg, "\n");
+				//printf(gameMessage.msg, "\n");
 
 				printf("\n");
 				peer->Send((char*)&gameMessage, sizeof(gameMessage), HIGH_PRIORITY, RELIABLE_ORDERED, 0, RakNet::UNASSIGNED_SYSTEM_ADDRESS, true);

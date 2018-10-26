@@ -1,4 +1,4 @@
-#include "Flock.h"
+#include "../headers/Flock.h"
 
 Flock::Flock(int numOfBoids) {
 	this->count = numOfBoids;
@@ -106,9 +106,7 @@ void Flock::update() {
 		boids[iter].update();
 }
 
-
-
 void Flock::render() {
-	for (int iter = 0; iter < count; iter++)
-		boids[iter].render();
+	//for (int iter = 0; iter < count; iter++)
+		//boids[iter].render();
 }
