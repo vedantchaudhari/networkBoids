@@ -3,13 +3,15 @@
 #include <vector>
 
 #include "Boid.h"
+#include "RakNet/DS_List.h"
 
 class Flock {
 private:
 	int count;
 
 public:
-	std::vector<Boid> boids;
+	//std::vector<Boid> boids;
+	DataStructures::List<Boid> boidsList;
 
 	Flock(int numOfBoids);
 
@@ -23,7 +25,7 @@ public:
 	Flock operator=(const Flock& b)
 	{
 		count = b.count;
-		boids = b.boids;
+		boidsList = b.boidsList;
 		return *this;
 	}
 };

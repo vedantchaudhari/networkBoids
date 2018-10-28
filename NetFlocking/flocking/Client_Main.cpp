@@ -40,12 +40,11 @@ enum dataMode
 	SHARE_MODE,
 	COUPLED_MODE,
 };
+
 void update() {
 	SDLInterface::getInstance()->render();
 	SDLInterface::getInstance()->background();
-	
 	InputInterface::getInstance()->update();
-
 	SDLInterface::getInstance()->setColor(255, 255, 255, 255);
 }
 
@@ -114,6 +113,7 @@ int main(int argc, char *argv[]) {
 
 				printf("data sent\n");
 				//send out client data to server
+				// ****TODO Probably load the flock up with boids before it's connected to the server
 				ClientData sendData;
 				sendData.clientFlock = flock;
 				//sendData.clientFlock.boids = flock.boids;
