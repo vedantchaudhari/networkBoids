@@ -91,7 +91,7 @@ int main(int const argc, char const *const *const argv)
 					clients[0].clientFlock = gameMessage->clientFlock;
 					clients[0].clientIP = packet->systemAddress;
 					clients[0].instantiated = true;
-					printf("Client 1 connected");
+					printf("Client 1 connected \n");
 				}
 				else if (clients[1].instantiated == false)
 				{
@@ -99,7 +99,7 @@ int main(int const argc, char const *const *const argv)
 					clients[1].clientFlock = gameMessage->clientFlock;
 					clients[1].clientIP = packet->systemAddress;
 					clients[1].instantiated = true;
-					printf("Client 2 connected");
+					printf("Client 2 connected \n");
 
 				}
 			}
