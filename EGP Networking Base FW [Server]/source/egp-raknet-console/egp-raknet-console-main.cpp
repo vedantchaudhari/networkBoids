@@ -81,9 +81,9 @@ int main(int const argc, char const *const *const argv)
 			//Jack
 			case INCOMING_CLIENTDATA:
 			{
-
 				//add client data to client list
 				printf("incoming client data: \n");
+				
 				ClientData* gameMessage = (ClientData*)packet->data;
 				if (clients[0].instantiated == false)
 				{
@@ -100,8 +100,10 @@ int main(int const argc, char const *const *const argv)
 					clients[1].clientIP = packet->systemAddress;
 					clients[1].instantiated = true;
 					printf("Client 2 connected \n");
-
 				}
+
+				// ****TODO: Default to data push, simulate both ClientData flocks on server and send to peers for rendering
+
 			}
 			break;
 			case DATA_PUSH:

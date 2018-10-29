@@ -125,8 +125,7 @@ int main(int argc, char *argv[]) {
 			break;
 			case SEND_CLIENTDATA:
 			{
-
-				printf("data sent\n");
+				std::cout << "Sent client flocking data to server" << std::endl;
 				//send out client data to server
 				// ****TODO Probably load the flock up with boids before it's connected to the server
 				ClientData sendData;

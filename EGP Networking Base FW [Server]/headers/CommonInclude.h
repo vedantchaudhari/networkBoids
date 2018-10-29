@@ -36,6 +36,7 @@ struct GameMessageData
 	Flock flockData = NULL;
 };
 #pragma pack(pop)
+
 #pragma pack(push, 1)
 struct ClientData
 {
