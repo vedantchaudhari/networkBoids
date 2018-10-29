@@ -47,7 +47,7 @@ public:
 	void clearBuffers();
 	void steerTo(float x, float y);
 
-	Boid operator=(const Boid b)
+	/*Boid operator=(const Boid b)
 	{
 		numOfNeighbors = b.numOfNeighbors;
 		pos[0] = b.pos[0];
@@ -66,5 +66,5 @@ public:
 		theta = b.theta;
 
 		return *this;
-	}
+	}*/
 };

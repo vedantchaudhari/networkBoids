@@ -26,6 +26,7 @@ enum GameMessages
 	DATA_SHARE,
 	DATA_COUPLED,
 	INCOMING_CLIENTDATA,
+	RECIEVE_FLOCK_DATA,
 	ID_SEND_TO_ALL_FROM_SERVER,
 };
 
@@ -33,7 +34,6 @@ enum GameMessages
 struct GameMessageData
 {
 	int ID = DATA_PUSH;
-	Flock flockData = NULL;
 };
 #pragma pack(pop)
 

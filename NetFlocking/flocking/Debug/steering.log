@@ -1,42 +1,5 @@
-﻿  SDLInterface.cpp
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(101): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(102): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(103): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(115): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(116): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(120): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\sdlinterface.cpp(121): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  InputInterface.cpp
-  Flock.cpp
-  Client_Main.cpp
-c:\users\vedan\desktop\networkboids\netflocking\flocking\client_main.cpp(76): warning C4309: 'initializing': truncation of constant value
-c:\users\vedan\desktop\networkboids\netflocking\flocking\client_main.cpp(89): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  Client_Main.cpp
+c:\users\john.malvey\desktop\networkboids\netflocking\flocking\client_main.cpp(77): warning C4309: 'initializing': truncation of constant value
+c:\users\john.malvey\desktop\networkboids\netflocking\flocking\client_main.cpp(90): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
-  Boid.cpp
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(22): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(32): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(37): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(57): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(66): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(67): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(72): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(74): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(73): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(77): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(79): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(78): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(82): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(84): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(83): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(108): warning C4305: '+=': truncation from 'double' to 'float'
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(112): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(114): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(116): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-c:\users\vedan\desktop\networkboids\netflocking\flocking\boid.cpp(118): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-LINK : fatal error LNK1168: cannot open C:\Users\vedan\Desktop\networkBoids\NetFlocking\flocking\Debug\steering.exe for writing
+  steering.vcxproj -> C:\Users\john.malvey\Desktop\networkBoids\NetFlocking\flocking\Debug\steering.exe

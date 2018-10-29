@@ -39,13 +39,14 @@ enum GameMessages
 	DATA_PUSH,
 	DATA_SHARE,
 	DATA_COUPLED,
-	SEND_CLIENTDATA
+	SEND_CLIENTDATA,
+	RECIEVE_FLOCK_DATA
 };
 
 struct ClientData
 {
 	int ID = SEND_CLIENTDATA;
-	Flock clientFlock = NULL;
+	Flock clientFlock = Flock(10);
 	RakNet::SystemAddress clientIP;
 };
 
@@ -78,7 +79,7 @@ int main(int argc, char *argv[]) {
 	RakNet::SocketDescriptor sd;
 
 	//network modes
-	int dataMode = PUSH_MODE;
+	int dataMode = SHARE_MODE;
 
 	peer->Startup(1, &sd, 1);
 
@@ -135,18 +136,25 @@ int main(int argc, char *argv[]) {
 				peer->Send((char*)&sendData, sizeof(sendData), HIGH_PRIORITY, RELIABLE_ORDERED, 0, packet->systemAddress, false);
 			}
 			break;
+			case RECIEVE_FLOCK_DATA:
+			{
+				ClientData *updatedFlock;
+				updatedFlock = (ClientData*)packet->data;
+				flock = updatedFlock->clientFlock;
 
+			}
+			break;
 			}
 		}
 			//run local boids
-			
+			/*
 			iTime2 = SDL_GetTicks();
 
 			if (iTime2 - iTime >= TICK) {
 				iTime = SDL_GetTicks();
 				flock.update();
 			}
-			
+			*/
 
 			// send data to server
 			switch (dataMode)

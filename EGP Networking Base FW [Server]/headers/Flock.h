@@ -2,6 +2,7 @@
 
 #include <vector>
 
+#include "RakNet/DS_List.h"
 #include "Boid.h"
 
 class Flock {
@@ -9,7 +10,8 @@ private:
 	int count;
 
 public:
-	std::vector<Boid> boids;
+	//std::vector<Boid> boids;
+	DataStructures::List<Boid> boidsList;
 
 	Flock(int numOfBoids);
 
@@ -18,7 +20,6 @@ public:
 	float getDistance(Boid boidA, Boid boidB);
 
 	void update();
-	void render();
 
 	/*Flock operator=(const Flock b)
 	{

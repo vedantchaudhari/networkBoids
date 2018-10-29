@@ -35,10 +35,10 @@ public:
 	void update();
 	void render();
 
-	Flock operator=(const Flock& b)
+	/*Flock operator=(const Flock& b)
 	{
 		count = b.count;
 		boidsList = b.boidsList;
 		return *this;
-	}
+	}*/
 };

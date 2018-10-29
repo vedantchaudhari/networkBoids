@@ -102,7 +102,31 @@ int main(int const argc, char const *const *const argv)
 					printf("Client 2 connected \n");
 				}
 
+
 				// ****TODO: Default to data push, simulate both ClientData flocks on server and send to peers for rendering
+				if (packet->systemAddress == clients[0].clientIP)
+				{
+					ClientData client0Flock;
+					clients[0].clientFlock.update();
+					client0Flock = clients[0];
+					client0Flock.ID = RECIEVE_FLOCK_DATA;
+					peer->Send((char*)&client0Flock, sizeof(client0Flock), HIGH_PRIORITY, RELIABLE_ORDERED, 0, clients[0].clientIP, false);
+				}
+				else if (packet->systemAddress == clients[1].clientIP)
+				{
+					clients[1].clientFlock.update();
+					ClientData client1Flock;
+					client1Flock = clients[1];
+					client1Flock.ID = RECIEVE_FLOCK_DATA;
+					peer->Send((char*)&client1Flock, sizeof(client1Flock), HIGH_PRIORITY, RELIABLE_ORDERED, 0, clients[1].clientIP, false);
+				}
+
+				//send a request to the clients to send their data
+				ClientData getData;
+				getData.ID = INCOMING_CLIENTDATA;
+				peer->Send((char*)&getData, sizeof(getData), HIGH_PRIORITY, RELIABLE_ORDERED, 0, RakNet::UNASSIGNED_SYSTEM_ADDRESS, true);
+
+				
 
 			}
 			break;
@@ -114,8 +138,7 @@ int main(int const argc, char const *const *const argv)
 			//Jack
 			case DATA_SHARE:
 			{
-
-			}
+					}
 			break;
 			//Jack
 			case DATA_COUPLED:

@@ -12,8 +12,8 @@
 // - checking service, which may retain a copy of the project on its database.
 
 // FLAGS
-#define DRAW_RADIUS_FLAG true
-#define DRAW_VECTOR_FLAG true
+#define DRAW_RADIUS_FLAG false
+#define DRAW_VECTOR_FLAG false
 
 // CONSTANTS
 #define WIDTH 640
