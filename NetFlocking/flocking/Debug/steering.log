@@ -1,5 +1,16 @@
-﻿  Client_Main.cpp
-c:\users\john.malvey\desktop\networkboids\netflocking\flocking\client_main.cpp(77): warning C4309: 'initializing': truncation of constant value
-c:\users\john.malvey\desktop\networkboids\netflocking\flocking\client_main.cpp(90): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+﻿  Flock.cpp
+c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(34): error C3646: 'clientFlock': unknown override specifier
+c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(34): error C2059: syntax error: '='
+c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(34): error C2238: unexpected token(s) preceding ';'
+  Client_Main.cpp
+c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(34): error C3646: 'clientFlock': unknown override specifier
+c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(34): error C2059: syntax error: '='
+c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(34): error C2238: unexpected token(s) preceding ';'
+c:\users\vedan\desktop\networkboids\netflocking\flocking\client_main.cpp(53): warning C4309: 'initializing': truncation of constant value
+c:\users\vedan\desktop\networkboids\netflocking\flocking\client_main.cpp(109): error C2039: 'clientFlock': is not a member of 'ClientData'
+  c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(31): note: see declaration of 'ClientData'
+c:\users\vedan\desktop\networkboids\netflocking\flocking\client_main.cpp(119): error C2039: 'clientFlock': is not a member of 'ClientData'
+  c:\users\vedan\desktop\networkboids\netflocking\flocking\serverdefine.h(31): note: see declaration of 'ClientData'
+c:\users\vedan\desktop\networkboids\netflocking\flocking\client_main.cpp(66): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\string.h(133): note: see declaration of 'strcpy'
-  steering.vcxproj -> C:\Users\john.malvey\Desktop\networkBoids\NetFlocking\flocking\Debug\steering.exe
+  Generating Code...

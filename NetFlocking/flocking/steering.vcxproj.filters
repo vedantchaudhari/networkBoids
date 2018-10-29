@@ -59,5 +59,8 @@
     <ClInclude Include="InputInterface.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
+    <ClInclude Include="ServerDefine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

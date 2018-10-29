@@ -16,7 +16,12 @@
 #include <vector>
 
 #include "Boid.h"
+#include "ServerDefine.h"
+
 #include "RakNet/DS_List.h"
+#include "RakNet/BitStream.h"
+
+// Bitstream
 
 class Flock {
 private:
@@ -34,6 +39,9 @@ public:
 
 	void update();
 	void render();
+
+	void writeToBitstream(RakNet::BitStream& bsOut);
+	void readFromBitstream(RakNet::Packet* packet);
 
 	/*Flock operator=(const Flock& b)
 	{

@@ -23,6 +23,7 @@
     <ClInclude Include="Flock.h" />
     <ClInclude Include="InputInterface.h" />
     <ClInclude Include="SDLInterface.h" />
+    <ClInclude Include="ServerDefine.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{07ED8114-0659-4424-9468-50DBBEA5882A}</ProjectGuid>

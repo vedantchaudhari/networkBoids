@@ -31,31 +31,7 @@
 #include "../../DevSDKs/include/RakNet/RakNetTypes.h"
 #include <stdio.h>
 
-enum GameMessages
-{
-	SETMODE_PUSH= ID_USER_PACKET_ENUM + 1,
-	SETMODE_SHARE,
-	SETMODE_COUPLED,
-	DATA_PUSH,
-	DATA_SHARE,
-	DATA_COUPLED,
-	SEND_CLIENTDATA,
-	RECIEVE_FLOCK_DATA
-};
-
-struct ClientData
-{
-	int ID = SEND_CLIENTDATA;
-	Flock clientFlock = Flock(10);
-	RakNet::SystemAddress clientIP;
-};
-
-enum dataMode
-{
-	PUSH_MODE,
-	SHARE_MODE,
-	COUPLED_MODE,
-};
+#include "ServerDefine.h"
 
 void update() {
 	SDLInterface::getInstance()->render();
